@@ -80,7 +80,7 @@ def roman_to_integer(s):
     return total
 roman_num=input()
 print(roman_to_integer(roman_num))
-'''
+
 #happy numbers
 def is_happy_number(n):
     def get_next(number):
@@ -102,4 +102,24 @@ if is_happy_number(num):
     print(f"{num} is a happy number.")
 else:
     print(f"{num} is not a happy number.")
+    '''
+n = int(input())
+for i in range(1, n + 1):
+    kk
+    print("*" * i, end="")
+
     
+    print(" " * (2 * (n - i)), end="")
+
+
+    print("*" * i)
+
+
+for i in range(n, 0, -1):
+    
+    print("*" * i, end="")
+
+    print(" " * (2 * (n - i)), end="")
+
+    print("*" * i)
+

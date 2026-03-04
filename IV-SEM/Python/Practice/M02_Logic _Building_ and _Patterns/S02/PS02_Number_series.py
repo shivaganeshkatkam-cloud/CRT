@@ -1,35 +1,113 @@
+'''
+#Number Series: Sequential order of numbers in a specific pattern
 
-#print even and odd numbers
-'''n=int(input())
-for i in range(0,n):
-    if i%2!=0:
-       print(i)
-        
-#print n Fibicocci
-n=int(input())
-a=0
-b=1
-for i in range(0,n):
-    print(a,end=" ")
-    c=a+b
-    a,b=b,c
-    x
-n=int(input())
-for i in range(0,n):
-    print()
-    for j in range(1,11):
-        s=i*j
-        print(i,"x",j,"=",s)
-       
-n=int(input())
-for i in range(1,n+1):
-    print(i**3,end=' ')
-     
-n=int(input())
+# 1. Print n natural numbers
+
+n = int(input("Enter a number: "))
+
+for i in range(1, n + 1):
+    print(i, end = ' ')
+
+    
+# 2. Print n even numbers
+
+n = int(input("Enter a number: "))
+for i in range(2, n + 1, 2):
+    print(i, end = ' ')
+
+    
+# 3. Print n odd numbers
+
+n = int(input("Enter a number: "))
+for i in range(1, n + 1, 2):
+    print(i, end = ' ')
+
+
+# 4. Print n Fibonacci numbers
+
+n = int(input("Enter a number: "))
+a, b = 0, 1
+
 for i in range(n):
-    if i%2==0:
-        print(-i)
-    else:
-        print(i)
-        '''
+    print(a, end = ' ')
+    a, b = b, a + b
 
+OR:
+
+n = int(input("Enter a number: "))
+count = 0
+while count < n:
+    print(a, end = ' ')
+    a, b = b, a + b
+    count += 1
+
+
+# 5. Print Multiplication Table of a given number
+
+n = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(f"{n} x {i} = {n * i}")
+
+OR: 
+
+n = int(input("Enter a number: "))
+i = 1
+while i <= 10:
+    print(f"{n} x {i} = {n * i}")
+    i += 1
+
+
+
+# 6. Print squares of first n natural numbers
+
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    print(i ** 2, end = ' ')
+
+
+# 7. Print cubes of first n natural numbers
+
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    print(i ** 3, end = ' ')
+
+
+
+# Alternative Series
+# 1. Print 1, -2, 3, -4, 5, -6, ...
+
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    if i % 2 == 0:
+        print(-i, end = ' ')
+    else:
+        print(i, end = ' ')
+
+
+# 2. Print -1, 2, -3, 4, -5, 6, ...
+
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    if i % 2 == 0:
+        print(i, end = ' ')
+    else:
+        print(-i, end = ' ')
+
+print()
+
+# 3. Print 1, 2, 4, 7, 11, 16, ...
+n = int(input("Enter a number: "))
+a = 1
+for i in range(n):
+    print(a, end = ' ')
+    a += i + 1
+
+'''
+# 4. 1, 2, 6, 24, 120, ...
+
+n = int(input("Enter a number: "))
+a = 1
+for i in range(1, n + 1):
+    a *= i
+    print(a, end = ' ')
